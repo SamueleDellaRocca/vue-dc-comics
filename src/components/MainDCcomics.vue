@@ -11,7 +11,10 @@
         <ul class="list-main">
           <li v-for="(link, index) in arrayLinkMain" :key="index">
             <a href="">
-              <img src="../assets/img/buy-comics-merchandise.png" alt="" />
+              <img
+                :src="require('../assets/img/' + link.img)"
+                :alt="link.text"
+              />
               {{ link.text }}
             </a>
           </li>
@@ -85,7 +88,9 @@ export default {
     padding: 2rem 0px;
 
     img {
-      width: 30%;
+      width: 20%;
+      object-fit: contain;
+      margin-right: 10px;
     }
 
     a {
