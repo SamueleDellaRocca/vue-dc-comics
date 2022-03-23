@@ -173,6 +173,7 @@ export default {
   height: 400px;
   overflow: hidden;
   padding: 1rem 0px;
+  align-items: center;
 }
 
 .left-side {
