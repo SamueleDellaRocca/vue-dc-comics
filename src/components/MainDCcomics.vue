@@ -10,8 +10,10 @@
       <div class="container">
         <ul class="list-main">
           <li v-for="(link, index) in arrayLinkMain" :key="index">
-            <img src="../assets/img/buy-comics-merchandise.png" alt="" />
-            <a href="">{{ link.text }}</a>
+            <a href="">
+              <img src="../assets/img/buy-comics-merchandise.png" alt="" />
+              {{ link.text }}
+            </a>
           </li>
         </ul>
       </div>
@@ -90,6 +92,8 @@ export default {
       text-decoration: none;
       color: white;
       text-transform: uppercase;
+      display: flex;
+      align-items: center;
     }
   }
 }
