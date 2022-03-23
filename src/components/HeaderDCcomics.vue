@@ -57,22 +57,36 @@ export default {
 <style scoped lang="scss">
 .container {
   width: 80%;
-  padding: 1rem 0px;
   margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  img {
+    padding: 1rem 0px;
+  }
 }
 
 .ul-nav li {
   display: inline-block;
-  padding: 1rem;
+  padding: 48.5px 1rem;
+  border-bottom: 10px solid transparent;
+  margin-bottom: -10px;
 
   a {
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
     font-weight: bold;
+    color: black;
+  }
+
+  &:hover {
+    color: rgb(2 130 249);
+    border-bottom: 10px solid rgb(2 130 249);
+  }
+
+  &:hover a {
+    color: rgb(2 130 249);
   }
 }
 </style>

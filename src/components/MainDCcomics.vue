@@ -2,7 +2,7 @@
   <main>
     <div class="black">
       <div class="container">
-        <h1>--> Content goes here</h1>
+        <h1>--> Content goes here &lt;--</h1>
       </div>
     </div>
 
