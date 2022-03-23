@@ -32,6 +32,8 @@
 </template>
 
 <script>
+import CartaMain from "./components/CartaMain.vue";
+
 export default {
   name: "MainDCcomics",
   data() {
@@ -146,6 +148,10 @@ export default {
         },
       ],
     };
+  },
+
+  components: {
+    CartaMain,
   },
 };
 </script>
