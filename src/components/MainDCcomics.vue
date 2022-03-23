@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import CartaMain from "./components/CartaMain.vue";
+import CartaMain from "./CartaMain.vue";
 
 export default {
   name: "MainDCcomics",
