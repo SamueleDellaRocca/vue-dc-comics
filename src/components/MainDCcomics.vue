@@ -3,6 +3,7 @@
     <div class="black">
       <div class="jumbo"></div>
       <div class="container">
+        <div class="current-series">current series</div>
         <CartaMain
           v-for="carta in arrayCarte"
           :key="carta.series"
@@ -10,11 +11,13 @@
           :titolo="carta.series"
         >
         </CartaMain>
+
+        <div class="load-more">Load More</div>
       </div>
     </div>
 
     <div class="blu">
-      <div class="container">
+      <div class="container-2">
         <ul class="list-main">
           <li v-for="(link, index) in arrayLinkMain" :key="index">
             <a href="">
@@ -165,11 +168,11 @@ export default {
 .container {
   width: 80%;
   margin: auto;
-
-  h1 {
-    color: white;
-    padding: 3rem;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 5rem 0px;
+  position: relative;
 }
 
 .jumbo {
@@ -178,8 +181,42 @@ export default {
   background-position-x: center;
 }
 
+.current-series {
+  background-color: #0282f9;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: -28px;
+  left: -50px;
+  cursor: pointer;
+}
+
+.load-more {
+  background-color: #0282f9;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  margin: auto;
+  margin-bottom: -2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
 .blu {
   background-color: rgb(2 130 249);
+}
+
+.container-2 {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0px;
 }
 
 .black {
@@ -188,13 +225,15 @@ export default {
 
 .list-main {
   display: flex;
+  gap: 50px;
   li {
     display: flex;
     align-items: center;
     padding: 2rem 0px;
 
     img {
-      width: 20%;
+      width: 45px;
+      height: 45px;
       object-fit: contain;
       margin-right: 10px;
     }
